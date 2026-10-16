@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>142-Umumiy O‘rta Ta‘lim Maktabi - Rasmiy Veb-Sayti</title>
+  <meta name="description" content="O‘zbekiston Respublikasi Maktabgacha va maktab ta‘limi vazirligi tasarrufidagi 142-sonli umumta'lim maktabining rasmiy axborot portali." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="142-Umumiy O‘rta Ta‘lim Maktabi - Rasmiy Veb-Sayti" />
+  <meta property="og:description" content="O‘zbekiston Respublikasi davlat maktabining rasmiy axborot portali. Dars jadvali, ma'muriyat, o'qituvchilar va yangiliklar." />
+
+  <!-- Fonts & CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. GOVERNMENT TOPBAR
+       ========================================================================= -->
+  <div class="gov-topbar">
+    <div class="container gov-topbar-inner">
+      <div class="gov-affiliation">
+        <!-- Uzbekistan Flag Colors Icon -->
+        <svg class="gov-flag-icon" viewBox="0 0 640 480">
+          <g fill-rule="evenodd" stroke-width="1pt">
+            <path fill="#0099b5" d="M0 0h640v160H0z"/>
+            <path fill="#ce1126" d="M0 155h640v10H0z"/>
+            <path fill="#fff" d="M0 165h640v150H0z"/>
+            <path fill="#ce1126" d="M0 315h640v10H0z"/>
+            <path fill="#1eb53a" d="M0 320h640v160H0z"/>
+          </g>
+        </svg>
+        <span data-i18n="gov_republic">O‘zbekiston Respublikasi Maktabgacha va maktab ta‘limi vazirligi</span>
+      </div>
+
+      <div class="gov-topbar-contacts">
+        <span class="gov-topbar-link" data-i18n="gov_hotline">Ishonch telefoni: 1006</span>
+        <span style="opacity: 0.4;">|</span>
+        <a href="#contact" class="gov-topbar-link">info@maktab142.uz</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. OFFICIAL STICKY NAVBAR
+       ========================================================================= -->
+  <header class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      
+      <!-- School Identity Brand -->
+      <a href="#hero" class="nav-brand" aria-label="Bosh sahifa">
+        <div class="school-emblem">
+          <!-- Official Educational Seal Icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <polyline points="10 7 13 10 16 7"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="school-number" data-i18n="school_name_short">142-Umumta'lim Maktabi</span>
+          <span class="school-locality" data-i18n="school_locality_short">Toshkent shahri, Mirzo Ulug'bek tumani</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" aria-label="Asosiy menyu">
+        <a href="#hero" class="nav-link active" data-i18n="nav_home">Bosh sahifa</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">Maktab haqida</a>
+        <a href="#admin" class="nav-link" data-i18n="nav_admin">Ma’muriyat</a>
+        <a href="#teachers" class="nav-link" data-i18n="nav_teachers">O‘qituvchilar</a>
+        <a href="#timetable" class="nav-link" data-i18n="nav_timetable">Dars jadvali</a>
+        <a href="#news" class="nav-link" data-i18n="nav_news">Yangiliklar</a>
+        <a href="#documents" class="nav-link" data-i18n="nav_docs">Hujjatlar</a>
+        <a href="#parents" class="nav-link" data-i18n="nav_parents">Ota-onalarga</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Bog‘lanish</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Quick Search Modal Trigger -->
+        <button class="btn-icon" id="nav-search-trigger" title="Qidiruv" aria-label="Qidiruv">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector-wrapper">
+          <button class="lang-btn" id="lang-btn" aria-label="Tilni tanlash">
+            <span id="current-lang-text">O‘zbekcha</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-option active" data-lang="uz">🇺🇿 O‘zbekcha</button>
+            <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
+            <button class="lang-option" data-lang="en">🇬🇧 English</button>
+          </div>
+        </div>
+
+        <!-- Light / Dark Theme Switcher -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Mavzuni almashtirish" aria-label="Mavzuni almashtirish">
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Mobil menyu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle);">
+        <div class="school-number" style="font-size: 1rem;">142-Umumta'lim Maktabi</div>
+        <button class="btn-icon" id="mobile-drawer-close" aria-label="Yopish">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="nav-link" data-i18n="nav_home">Bosh sahifa</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">Maktab haqida</a></li>
+        <li><a href="#admin" class="nav-link" data-i18n="nav_admin">Ma’muriyat</a></li>
+        <li><a href="#teachers" class="nav-link" data-i18n="nav_teachers">O‘qituvchilar</a></li>
+        <li><a href="#timetable" class="nav-link" data-i18n="nav_timetable">Dars jadvali</a></li>
+        <li><a href="#news" class="nav-link" data-i18n="nav_news">Yangiliklar</a></li>
+        <li><a href="#documents" class="nav-link" data-i18n="nav_docs">Hujjatlar</a></li>
+        <li><a href="#parents" class="nav-link" data-i18n="nav_parents">Ota-onalarga</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Bog‘lanish</a></li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+      <a href="#contact" class="btn btn-primary" data-i18n="appeal_title" style="width: 100%;">Elektron murojaat</a>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       3. HERO SECTION (SCHOOL FACADE + 3D ACADEMIC CANVAS)
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      
+      <!-- Text Proposition -->
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span data-i18n="hero_kicker">Davlat umumiy o‘rta ta’lim muassasasi</span>
+        </div>
+        
+        <h1 class="hero-title" data-i18n="hero_title">
+          Bilim — kelajak poydevori!
+        </h1>
+        
+        <p class="hero-description" data-i18n="hero_desc">
+          Maktabimizda sifatli ta’lim, zamonaviy bilimlar va yuksak ma’naviyat orqali vatanimiz ravnaqiga hissa qo‘shuvchi barkamol avlodni tarbiyalaymiz.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#about" class="btn btn-primary" data-i18n="hero_btn_about">Maktab haqida</a>
+          <a href="#news" class="btn btn-outline" data-i18n="hero_btn_news">Yangiliklarni ko‘rish</a>
+        </div>
+
+        <div class="hero-features-strip">
+          <div class="hero-feature-item">
+            <svg class="hero-feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="hero_feat1">Ixtisoslashtirilgan sinflar</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg class="hero-feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="hero_feat2">STEAM & Raqamli laboratoriyalar</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg class="hero-feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="hero_feat3">Xalqaro olimpiada g'oliblari</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual: Subtle 3D Canvas + School Facade Architectural Card -->
+      <div class="hero-visual-wrapper">
+        <canvas id="hero-3d-canvas"></canvas>
+
+        <div class="hero-facade-card">
+          <div class="hero-facade-image-frame">
+            <!-- Modern Architectural Public School Facade SVG -->
+            <svg class="hero-facade-svg" viewBox="0 0 500 300" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#134074" />
+                  <stop offset="100%" stop-color="#0b2545" />
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#sky-grad)" />
+              <!-- School Building Graphic -->
+              <rect x="50" y="80" width="400" height="180" rx="4" fill="#ffffff" opacity="0.95" />
+              <rect x="70" y="100" width="360" height="30" fill="#00a896" />
+              <!-- Central Grand Entrance Pillars -->
+              <rect x="210" y="130" width="80" height="130" fill="#edf2f7" />
+              <rect x="230" y="180" width="40" height="80" rx="20" fill="#0b2545" />
+              <!-- Windows Grid Left -->
+              <rect x="90" y="150" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <rect x="150" y="150" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <rect x="90" y="200" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <rect x="150" y="200" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <!-- Windows Grid Right -->
+              <rect x="310" y="150" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <rect x="370" y="150" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <rect x="310" y="200" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <rect x="370" y="200" width="40" height="30" rx="2" fill="#134074" opacity="0.6" />
+              <!-- National Flag Pole -->
+              <line x1="250" y1="40" x2="250" y2="80" stroke="#cbd5e1" stroke-width="3" />
+              <rect x="250" y="42" width="28" height="18" fill="#00a896" />
+              <!-- Ground Greenery -->
+              <rect x="0" y="255" width="500" height="45" fill="#059669" opacity="0.85" />
+            </svg>
+          </div>
+          <div class="hero-facade-meta">
+            <div>
+              <span class="facade-tag" data-i18n="hero_facade_tag">O'quv binosi</span>
+              <div class="facade-name" data-i18n="hero_facade_title">142-sonli umumiy o'rta ta'lim maktabi</div>
+            </div>
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--accent-teal);">1978 · 2026</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SCHOOL STATISTICS SECTION
+       ========================================================================= -->
+  <section class="stats-strip" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number tabular-nums" id="stat-num-students">1,450+</div>
+          <div class="stat-label" data-i18n="stat_students_label">O‘quvchilar soni</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number tabular-nums" id="stat-num-teachers">86</div>
+          <div class="stat-label" data-i18n="stat_teachers_label">Malakali o‘qituvchilar</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number tabular-nums" id="stat-num-classes">48</div>
+          <div class="stat-label" data-i18n="stat_classes_label">Sinflar soni</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number tabular-nums" id="stat-num-clubs">24</div>
+          <div class="stat-label" data-i18n="stat_clubs_label">Fan va sport to‘garaklari</div>
+        </div>
+      </div>
+      <div class="stats-disclaimer" data-i18n="stat_note">* Ma'lumotlar joriy o'quv yili uchun namunaviy ko'rsatkichlar asosida keltirilgan.</div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. ABOUT OUR SCHOOL (MISSION & FACILITIES)
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="about_kicker">Tarix va qadriyatlar</span>
+        <h2 class="section-title" data-i18n="about_title">Ta’lim va tarbiya maskanimiz</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text-content">
+          <p data-i18n="about_p1">
+            Maktabimiz ko‘p yillik boy an’ana va yutuqlarga ega bo‘lib, o‘quvchilarning intellektual va ma’naviy salohiyatini yuksaltirishga xizmat qiladi. Davlat ta’lim standartlari asosida har bir o‘quvchiga individual yondashuv yo‘lga qo‘yilgan.
+          </p>
+          <p data-i18n="about_p2">
+            Bizning maqsadimiz — zamonaviy fan va texnologiyalarni chuqur o‘zlashtirgan, mustaqil fikrlaydigan va vatanparvar yoshlarni voyaga yetkazishdir.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-box">
+              <h4 class="highlight-title" data-i18n="about_mission_title">Bizning missiyamiz</h4>
+              <p class="highlight-desc" data-i18n="about_mission_desc">Har bir o'quvchining qobiliyatini kashf qilish va sifatli ta'lim berish.</p>
+            </div>
+            <div class="highlight-box" style="border-left-color: var(--primary-blue);">
+              <h4 class="highlight-title" data-i18n="about_vision_title">Bizning maqsadimiz</h4>
+              <p class="highlight-desc" data-i18n="about_vision_desc">Zamonaviy innovatsiyalar va milliy qadriyatlarni uyg'unlashtirish.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Illustrative School Emblem & State Crest Shield Graphic -->
+          <div class="official-card" style="padding: 32px; text-align: center;">
+            <div style="width: 80px; height: 80px; margin: 0 auto 16px auto; border-radius: 50%; background: rgba(0,168,150,0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-teal);">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Davlat Ta'lim Standartlari</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+              Maktabimizda o'quv jarayoni O'zbekiston Respublikasining "Ta'lim to'g'risida"gi qonuniga muvofiq, zamonaviy metodikalar asosida tashkil etilgan.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 16px; font-size: 0.8125rem; font-weight: 700; color: var(--primary-navy);">
+              <span>✓ Akkreditatsiyalangan</span>
+              <span>✓ Sertifikatlangan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campus Facilities -->
+      <div style="margin-top: 48px;">
+        <div style="text-align: center; margin-bottom: 32px;">
+          <span class="section-kicker" data-i18n="fac_kicker">Shart-sharoitlar</span>
+          <h3 style="font-size: 1.5rem;" data-i18n="fac_title">Maktab infratuzilmasi</h3>
+        </div>
+
+        <div class="facilities-grid">
+          <div class="official-card facility-card">
+            <div class="facility-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h4 class="facility-title" data-i18n="fac_lib_title">Kutubxona markazi</h4>
+            <p class="facility-desc" data-i18n="fac_lib_desc">20,000 dan ortiq badiiy, ilmiy va darslik adabiyotlari jamg'armasi.</p>
+          </div>
+
+          <div class="official-card facility-card">
+            <div class="facility-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4 class="facility-title" data-i18n="fac_it_title">Kompyuter sinflari</h4>
+            <p class="facility-desc" data-i18n="fac_it_desc">Optik tolali internet va zamonaviy kompyuterlar bilan jihozlangan IT xonalari.</p>
+          </div>
+
+          <div class="official-card facility-card">
+            <div class="facility-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h4 class="facility-title" data-i18n="fac_sport_title">Sport majmuasi</h4>
+            <p class="facility-desc" data-i18n="fac_sport_desc">Keng yopiq sport zali va sun'iy qoplamali futbol maydoni.</p>
+          </div>
+
+          <div class="official-card facility-card">
+            <div class="facility-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L4.69 17.5A2 2 0 0 0 6.22 21h11.56a2 2 0 0 0 1.53-3.5L14 9.31V2"/></svg>
+            </div>
+            <h4 class="facility-title" data-i18n="fac_lab_title">STEAM laboratoriyalari</h4>
+            <p class="facility-desc" data-i18n="fac_lab_desc">Fizika, kimyo va biologiya fanlari bo'yicha amaliy tajriba laboratoriyalari.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SCHOOL ADMINISTRATION SECTION
+       ========================================================================= -->
+  <section class="section section-alt" id="admin">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="admin_kicker">Rahbariyat</span>
+        <h2 class="section-title" data-i18n="admin_title">Maktab ma’muriyati</h2>
+        <p class="section-subtitle" data-i18n="admin_subtitle">Ta'lim sifatini nazorat qiluvchi va jamoani boshqaruvchi rasmiy rahbarlar</p>
+      </div>
+
+      <div class="admin-grid">
+        
+        <!-- Principal -->
+        <div class="official-card admin-card">
+          <div class="admin-avatar-frame">
+            <svg class="admin-avatar-svg" viewBox="0 0 300 240">
+              <rect width="100%" height="100%" fill="#0b2545" />
+              <circle cx="150" cy="100" r="50" fill="#134074" />
+              <path d="M80,220 C80,165 120,160 150,160 C180,160 220,165 220,220 Z" fill="#134074" />
+              <text x="50%" y="46%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Outfit" font-weight="700">AN</text>
+            </svg>
+          </div>
+          <div class="admin-body">
+            <span class="admin-role" data-i18n="admin_p1_role">Maktab direktori</span>
+            <h3 class="admin-name" data-i18n="admin_p1_name">Azizova Nigora Baxtiyorovna</h3>
+            <p class="admin-bio" data-i18n="admin_p1_bio">Oliy toifali pedagog, 20 yillik tajribaga ega. Xalq ta'limi a'lochisi ko'krak nishoni sohibi.</p>
+            <div class="admin-reception">
+              <span data-i18n="admin_reception_label">Fuqarolarni qabul qilish vaqti:</span>
+              <span class="reception-time" data-i18n="admin_p1_reception">Dushanba va Chorshanba: 14:00 - 17:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deputy Academic -->
+        <div class="official-card admin-card">
+          <div class="admin-avatar-frame">
+            <svg class="admin-avatar-svg" viewBox="0 0 300 240">
+              <rect width="100%" height="100%" fill="#0b2545" />
+              <circle cx="150" cy="100" r="50" fill="#134074" />
+              <path d="M80,220 C80,165 120,160 150,160 C180,160 220,165 220,220 Z" fill="#134074" />
+              <text x="50%" y="46%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Outfit" font-weight="700">RSh</text>
+            </svg>
+          </div>
+          <div class="admin-body">
+            <span class="admin-role" data-i18n="admin_p2_role">O‘quv ishlari bo‘yicha direktor o‘rinbosari</span>
+            <h3 class="admin-name" data-i18n="admin_p2_name">Rustamov Shavkat Komilovich</h3>
+            <p class="admin-bio" data-i18n="admin_p2_bio">Matematika fani o'qituvchisi, ilg'or ta'lim metodikasi va o'quv rejalari koordinatori.</p>
+            <div class="admin-reception">
+              <span data-i18n="admin_reception_label">Fuqarolarni qabul qilish vaqti:</span>
+              <span class="reception-time" data-i18n="admin_p2_reception">Seshanba va Payshanba: 10:00 - 13:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deputy Student Affairs -->
+        <div class="official-card admin-card">
+          <div class="admin-avatar-frame">
+            <svg class="admin-avatar-svg" viewBox="0 0 300 240">
+              <rect width="100%" height="100%" fill="#0b2545" />
+              <circle cx="150" cy="100" r="50" fill="#134074" />
+              <path d="M80,220 C80,165 120,160 150,160 C180,160 220,165 220,220 Z" fill="#134074" />
+              <text x="50%" y="46%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Outfit" font-weight="700">SD</text>
+            </svg>
+          </div>
+          <div class="admin-body">
+            <span class="admin-role" data-i18n="admin_p3_role">Ma’naviy-ma’rifiy ishlar bo‘yicha o‘rinbosar</span>
+            <h3 class="admin-name" data-i18n="admin_p3_name">Saidova Dilnoza Akbarovna</h3>
+            <p class="admin-bio" data-i18n="admin_p3_bio">O'quvchilar tarbiyasi, to'garaklar va madaniy-ma'rifiy tadbirlar bo'yicha mas'ul rahbar.</p>
+            <div class="admin-reception">
+              <span data-i18n="admin_reception_label">Fuqarolarni qabul qilish vaqti:</span>
+              <span class="reception-time" data-i18n="admin_p3_reception">Juma: 14:00 - 17:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. TEACHERS DIRECTORY SECTION
+       ========================================================================= -->
+  <section class="section" id="teachers">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="teachers_kicker">Pedagogik jamoa</span>
+        <h2 class="section-title" data-i18n="teachers_title">Bizning o‘qituvchilarimiz</h2>
+        <p class="section-subtitle" data-i18n="teachers_subtitle">Yuqori toifali va tajribali ustozlar o'quvchilarga chuqur bilim beradi</p>
+      </div>
+
+      <div class="teachers-filter-bar">
+        <div class="teachers-search-wrapper">
+          <svg class="teachers-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="teacher-search-input" class="teachers-search-input" data-i18n-ph="teachers_search_ph" placeholder="O'qituvchi ismi yoki fan bo'yicha qidiring..." />
+        </div>
+
+        <div class="teachers-category-tabs">
+          <button class="category-tab active" data-cat="all" data-i18n="cat_all">Barcha fanlar</button>
+          <button class="category-tab" data-cat="lang" data-i18n="cat_lang">Ona tili va adabiyot</button>
+          <button class="category-tab" data-cat="math" data-i18n="cat_math">Matematika</button>
+          <button class="category-tab" data-cat="it" data-i18n="cat_it">Informatika</button>
+          <button class="category-tab" data-cat="science" data-i18n="cat_science">Aniq fanlar</button>
+          <button class="category-tab" data-cat="foreign" data-i18n="cat_foreign">Xorijiy tillar</button>
+          <button class="category-tab" data-cat="primary" data-i18n="cat_primary">Boshlang‘ich ta’lim</button>
+        </div>
+      </div>
+
+      <div class="teachers-grid" id="teachers-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. TIMETABLE & SCHOOL ROUTINE SECTION
+       ========================================================================= -->
+  <section class="section section-alt" id="timetable">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="tt_kicker">O‘quv jarayoni</span>
+        <h2 class="section-title" data-i18n="tt_title">Interaktiv dars jadvali</h2>
+        <p class="section-subtitle" data-i18n="tt_subtitle">Sinf, guruh va haftaning kunini tanlab dars jadvali bilan tanishing</p>
+      </div>
+
+      <!-- Routine & Bell Schedule Summary Box -->
+      <div class="routine-box">
+        <div class="routine-grid">
+          <div class="routine-col">
+            <h4 class="routine-heading">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>1-smena tartibi</span>
+            </h4>
+            <ul class="routine-list">
+              <li><span>1-dars</span> <span class="tabular-nums">08:00 - 08:45</span></li>
+              <li><span>2-dars</span> <span class="tabular-nums">08:50 - 09:35</span></li>
+              <li><span>3-dars</span> <span class="tabular-nums">09:40 - 10:25</span></li>
+              <li><span>Katta tanaffus</span> <span class="tabular-nums">10:25 - 10:40</span></li>
+              <li><span>4-dars</span> <span class="tabular-nums">10:40 - 11:25</span></li>
+              <li><span>5-dars</span> <span class="tabular-nums">11:30 - 12:15</span></li>
+              <li><span>6-dars</span> <span class="tabular-nums">12:20 - 13:05</span></li>
+            </ul>
+          </div>
+
+          <div class="routine-col">
+            <h4 class="routine-heading">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>2-smena tartibi</span>
+            </h4>
+            <ul class="routine-list">
+              <li><span>1-dars</span> <span class="tabular-nums">13:30 - 14:15</span></li>
+              <li><span>2-dars</span> <span class="tabular-nums">14:20 - 15:05</span></li>
+              <li><span>3-dars</span> <span class="tabular-nums">15:10 - 15:55</span></li>
+              <li><span>Katta tanaffus</span> <span class="tabular-nums">15:55 - 16:10</span></li>
+              <li><span>4-dars</span> <span class="tabular-nums">16:10 - 16:55</span></li>
+              <li><span>5-dars</span> <span class="tabular-nums">17:00 - 17:45</span></li>
+              <li><span>6-dars</span> <span class="tabular-nums">17:50 - 18:35</span></li>
+            </ul>
+          </div>
+
+          <div class="routine-col" style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="font-weight: 700; font-size: 1.0625rem; margin-bottom: 8px; color: var(--primary-navy);" data-i18n="routine_kicker">Tartib va intizom</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px;">
+              Dars mashg'ulotlari davomiyligi 45 daqiqa. O'quvchilar dars boshlanishidan kamida 10 daqiqa oldin maktabga kelishlari lozim.
+            </p>
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--accent-teal);">
+              ✓ 5 kunlik va 6 kunlik ta'lim haftaligi
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schedule Table Controls -->
+      <div class="timetable-controls">
+        <div class="timetable-selectors-group">
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-light); display: block; margin-bottom: 4px;" data-i18n="tt_class_label">Sinfni tanlang:</label>
+            <select id="timetable-class-select">
+              <option value="9">9-sinf</option>
+              <option value="10" selected>10-sinf</option>
+              <option value="11">11-sinf</option>
+              <option value="8">8-sinf</option>
+              <option value="7">7-sinf</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-light); display: block; margin-bottom: 4px;" data-i18n="tt_group_label">Guruh:</label>
+            <select id="timetable-group-select">
+              <option value="A" selected>A guruhi</option>
+              <option value="B">B guruhi</option>
+              <option value="V">V guruhi</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="timetable-weekday-tabs">
+          <button class="weekday-tab active" data-day="monday">Dushanba</button>
+          <button class="weekday-tab" data-day="tuesday">Seshanba</button>
+          <button class="weekday-tab" data-day="wednesday">Chorshanba</button>
+          <button class="weekday-tab" data-day="thursday">Payshanba</button>
+          <button class="weekday-tab" data-day="friday">Juma</button>
+          <button class="weekday-tab" data-day="saturday">Shanba</button>
+        </div>
+      </div>
+
+      <!-- Schedule Table Display -->
+      <div class="schedule-table-wrapper">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th data-i18n="tt_period">Dars</th>
+              <th data-i18n="tt_time">Vaqti</th>
+              <th data-i18n="tt_subject">Fan</th>
+              <th data-i18n="tt_teacher">O‘qituvchi</th>
+              <th data-i18n="tt_room">Xona</th>
+            </tr>
+          </thead>
+          <tbody id="timetable-tbody">
+            <!-- Rendered via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. NEWS & ANNOUNCEMENTS SECTION
+       ========================================================================= -->
+  <section class="section" id="news">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="news_kicker">So'nggi voqealar</span>
+        <h2 class="section-title" data-i18n="news_title">Maktab yangiliklari va e’lonlar</h2>
+        <p class="section-subtitle" data-i18n="news_subtitle">Ta'lim tadbirlari, olimpiada natijalari va maktab hayotiga doir eng yangi xabarlar</p>
+      </div>
+
+      <div class="news-filter-tabs">
+        <button class="news-tab active" data-news-cat="all" data-i18n="news_tab_all">Barchasi</button>
+        <button class="news-tab" data-news-cat="academic" data-i18n="news_tab_academic">Olimpiadalar</button>
+        <button class="news-tab" data-news-cat="events" data-i18n="news_tab_events">Tadbirlar</button>
+        <button class="news-tab" data-news-cat="announcements" data-i18n="news_tab_announcements">E'lonlar</button>
+      </div>
+
+      <div class="news-grid" id="news-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. STUDENTS & SCHOOL LIFE SECTION
+       ========================================================================= -->
+  <section class="section section-alt" id="life">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="life_kicker">Ijod va sport</span>
+        <h2 class="section-title" data-i18n="life_title">O‘quvchilar hayoti va yutuqlari</h2>
+      </div>
+
+      <div class="life-tabs-header">
+        <button class="life-tab-btn active" data-panel="panel-achievements" data-i18n="life_tab_achievements">Olimpiada va yutuqlar</button>
+        <button class="life-tab-btn" data-panel="panel-clubs" data-i18n="life_tab_clubs">To'garaklar</button>
+        <button class="life-tab-btn" data-panel="panel-initiatives" data-i18n="life_tab_initiatives">Tashabbuslar va Kengash</button>
+      </div>
+
+      <!-- Panel 1: Achievements -->
+      <div class="life-panel active" id="panel-achievements">
+        <div class="official-card achievement-card">
+          <span class="achievement-year">2026-yil</span>
+          <h4 class="achievement-title">Xalqaro Al-Xorazmiy olimpiadasi</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">10-sinf o'quvchisi matematika yo'nalishida kumush medal sohibi bo'ldi.</p>
+        </div>
+        <div class="official-card achievement-card">
+          <span class="achievement-year">2026-yil</span>
+          <h4 class="achievement-title">«Zakovat» intellektual o'yini</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Maktab terma jamoasi shahar bosqichida mutlaq 1-o'rinni qo'lga kiritdi.</p>
+        </div>
+        <div class="official-card achievement-card">
+          <span class="achievement-year">2026-yil</span>
+          <h4 class="achievement-title">«Umid nihollari» sport musobaqasi</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Voleybol bo'yicha qizlar terma jamoasi tuman chempioni deb topildi.</p>
+        </div>
+      </div>
+
+      <!-- Panel 2: Clubs -->
+      <div class="life-panel" id="panel-clubs">
+        <div class="official-card" style="padding: 24px;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 8px;">Robototexnika va Dasturlash</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Dushanba, Chorshanba: 15:00 - 16:30. IT laboratoriyasida amaliy mashg'ulotlar.</p>
+        </div>
+        <div class="official-card" style="padding: 24px;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 8px;">Shaxmat va Mantiq maktabi</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Seshanba, Payshanba: 14:30 - 16:00. Barcha sinf o'quvchilari uchun ochiq to'garak.</p>
+        </div>
+        <div class="official-card" style="padding: 24px;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 8px;">English Speaking & Debate Club</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Juma: 15:00 - 16:30. Xorijiy tillarni erkin so'zlashish va munozara olib borish.</p>
+        </div>
+      </div>
+
+      <!-- Panel 3: Initiatives -->
+      <div class="life-panel" id="panel-initiatives">
+        <div class="official-card" style="padding: 24px;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 8px;">O'quvchilar Kengashi (Yoshlar yetakchisi)</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Maktab ichki muhitini yaxshilash va o'quvchilar takliflarini ma'muriyatga yetkazish tizimi.</p>
+        </div>
+        <div class="official-card" style="padding: 24px;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 8px;">«Eko-Maktab» ko'kalamzorlashtirish harakati</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Chiqindilarni saralash va maktab hovlisini doimiy obodonlashtirish tashabbusi.</p>
+        </div>
+        <div class="official-card" style="padding: 24px;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 8px;">«Kitobxonlik haftaligi» marafonlari</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Har oy eng ko'p kitob mutolaa qilgan faol o'quvchilarni taqdirlash dasturi.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. OFFICIAL DOCUMENTS SECTION
+       ========================================================================= -->
+  <section class="section" id="documents">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="docs_kicker">Ochiqlik va shaffoflik</span>
+        <h2 class="section-title" data-i18n="docs_title">Rasmiy hujjatlar</h2>
+        <p class="section-subtitle" data-i18n="docs_subtitle">Maktab faoliyatiga oid normativ-huquqiy hujjatlar va nizomlar</p>
+      </div>
+
+      <div class="documents-grid" id="documents-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. PARENTS & STUDENTS PORTAL
+       ========================================================================= -->
+  <section class="section section-alt" id="parents">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="parents_kicker">Hamkorlik</span>
+        <h2 class="section-title" data-i18n="parents_title">Ota-onalar va o‘quvchilarga</h2>
+        <p class="section-subtitle" data-i18n="parents_subtitle">Maktabga qabul, ichki tartib-qoidalar va maslahatlar</p>
+      </div>
+
+      <div class="parent-grid">
+        <div class="official-card parent-card">
+          <div class="parent-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+          </div>
+          <h4 class="parent-title" data-i18n="parent_card1_title">1-sinfga qabul</h4>
+          <p class="parent-desc" data-i18n="parent_card1_desc">Elektron qabul jarayoni, talab qilinadigan hujjatlar va suhbat bosqichlari.</p>
+        </div>
+
+        <div class="official-card parent-card">
+          <div class="parent-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </div>
+          <h4 class="parent-title" data-i18n="parent_card2_title">Maktab formasi</h4>
+          <p class="parent-desc" data-i18n="parent_card2_desc">Davlat standarti bo'yicha belgilangan maktab kiyimi talablari.</p>
+        </div>
+
+        <div class="official-card parent-card">
+          <div class="parent-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h4 class="parent-title" data-i18n="parent_card3_title">Psixolog maslahati</h4>
+          <p class="parent-desc" data-i18n="parent_card3_desc">O'quvchilarning moslashuvi va ruhiy xotirjamligi bo'yicha professional tavsiyalar.</p>
+        </div>
+
+        <div class="official-card parent-card">
+          <div class="parent-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h4 class="parent-title" data-i18n="parent_card4_title">Ota-onalar majlisi</h4>
+          <p class="parent-desc" data-i18n="parent_card4_desc">Chorak yakunlari va umumiy yig'ilishlarning rasmiy taqvimi.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       13. PHOTO GALLERY SECTION
+       ========================================================================= -->
+  <section class="section" id="gallery">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="gallery_kicker">Hayotiy lahzalar</span>
+        <h2 class="section-title" data-i18n="gallery_title">Maktab fotogalereyasi</h2>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-close" id="lightbox-close">&times;</div>
+    <div class="lightbox-prev" id="lightbox-prev">&#10094;</div>
+    <div class="lightbox-next" id="lightbox-next">&#10095;</div>
+    <div class="lightbox-content-box">
+      <div class="lightbox-image-frame">
+        <svg viewBox="0 0 800 480" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+          <rect width="100%" height="100%" fill="#0b2545" />
+          <circle cx="400" cy="240" r="160" fill="none" stroke="#00a896" stroke-width="2" />
+          <text x="50%" y="52%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Outfit" font-weight="700">142-MAKTAB FOTOLAVHASI</text>
+        </svg>
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       14. FAQ ACCORDION SECTION
+       ========================================================================= -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="faq_kicker">Ko'p beriladigan savollar</span>
+        <h2 class="section-title" data-i18n="faq_title">Savol va javoblar</h2>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <div class="faq-item active">
+          <button class="faq-btn">
+            <span>1-sinfga qabul jarayoni qachon va qanday amalga oshiriladi?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-panel">
+            <p class="faq-answer">
+              1-sinfga qabul my.maktab.uz portali orqali har yili 20-iyundan boshlab elektron shaklda amalga oshiriladi. Mikrohudud bo'yicha belgilangan muddatda ota-onalar arizani tasdiqlaydilar.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>Maktabga qabul uchun qanday hujjatlar taqdim etiladi?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-panel">
+            <p class="faq-answer">
+              Bola tug'ilganlik haqidagi guvohnoma nusxasi, ota-onasining pasport nusxasi, 086-shakldagi tibbiy ma'lumotnoma va 3x4 o'lchamdagi 4 dona rangli fotosurat talab qilinadi.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>Dars jadvali va darslar vaqtini qayerdan bilib olish mumkin?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-panel">
+            <p class="faq-answer">
+              Saytimizning "Dars jadvali" bo'limida har bir sinf uchun haftalik darslar va xonalar ro'yxati joylashtirilgan. Shuningdek, kundalik.com tizimi orqali darslar real vaqt rejimida yoritib boriladi.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>Maktab ma'muriyati qabuliga qanday yozilish mumkin?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-panel">
+            <p class="faq-answer">
+              Maktab direktori dushanba va chorshanba kunlari soat 14:00 dan 17:00 gacha fuqarolarni qabul qiladi. Shuningdek, saytimizdagi "Elektron murojaat" formasi orqali onlayn murojaat qoldirishingiz mumkin.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       15. PUBLIC APPEALS & CONTACT SECTION
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="appeal_kicker">Jamoatchilik nazorati</span>
+        <h2 class="section-title" data-i18n="appeal_title">Elektron murojaat yuborish</h2>
+        <p class="section-subtitle" data-i18n="appeal_subtitle">Maktab ma'muriyatiga taklif, murojaat yoki arizangizni onlayn tarzda yuboring</p>
+      </div>
+
+      <div class="contact-section-grid">
+        
+        <!-- Official Appeal Form -->
+        <div class="official-card appeal-form-card">
+          <form class="appeal-form" id="appeal-form" novalidate>
+            
+            <div class="form-group">
+              <label class="form-label" for="appeal-name" data-i18n="appeal_name">To‘liq ismingiz</label>
+              <input type="text" id="appeal-name" required placeholder="Masalan: Abdullayev Temur Olimovich" />
+              <span class="form-error">Iltimos, to'liq ismingizni kiriting</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appeal-phone" data-i18n="appeal_phone">Telefon raqamingiz</label>
+              <input type="tel" id="appeal-phone" required placeholder="+998 90 123 45 67" />
+              <span class="form-error">Iltimos, to'liq telefon raqamingizni kiriting</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appeal-email" data-i18n="appeal_email">Elektron pochta (ixtiyoriy)</label>
+              <input type="email" id="appeal-email" placeholder="fuqaro@example.uz" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appeal-type" data-i18n="appeal_type">Murojaat turi</label>
+              <select id="appeal-type">
+                <option value="education">Ta'lim sifati va dars jarayoni</option>
+                <option value="admission">Maktabga qabul masalasi</option>
+                <option value="suggestion">Taklif va tashabbuslar</option>
+                <option value="other">Boshqa masalalar</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appeal-message" data-i18n="appeal_message">Murojaat matni</label>
+              <textarea id="appeal-message" rows="4" required placeholder="Murojaatingiz mazmunini batafsil yozing..."></textarea>
+              <span class="form-error">Iltimos, murojaat matnini yozing</span>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 8px;">
+              <input type="checkbox" id="appeal-consent" required style="margin-top: 4px;" />
+              <label for="appeal-consent" style="font-size: 0.8125rem; color: var(--text-muted); cursor: pointer;" data-i18n="appeal_consent">
+                Shaxsiy ma'lumotlarim qayta ishlanishiga roziman
+              </label>
+            </div>
+
+            <div class="appeal-disclaimer" data-i18n="appeal_notice">
+              Eslatma: Ushbu forma namunaviy bo'lib, murojaatlar davlat portali orqali rasmiy ro'yxatga olinadi.
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="appeal-submit-btn" data-i18n="appeal_submit">
+              Murojaatni yuborish
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Official Contact Details -->
+        <div class="contact-cards-col">
+          
+          <div class="official-card contact-card-item">
+            <div class="contact-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4 class="contact-item-title" data-i18n="contact_address_label">Manzilimiz</h4>
+              <p class="contact-item-text" data-i18n="contact_address_val">Toshkent shahri, Mirzo Ulug'bek tumani, Mustaqillik shoh ko'chasi, 42-uy</p>
+            </div>
+          </div>
+
+          <div class="official-card contact-card-item">
+            <div class="contact-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4 class="contact-item-title" data-i18n="contact_phone_label">Telefon raqamlari</h4>
+              <p class="contact-item-text tabular-nums" data-i18n="contact_phone_val">+998 (71) 234-56-78, +998 (71) 234-56-79</p>
+            </div>
+          </div>
+
+          <div class="official-card contact-card-item">
+            <div class="contact-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4 class="contact-item-title" data-i18n="contact_email_label">Elektron manzil</h4>
+              <p class="contact-item-text" data-i18n="contact_email_val">info@maktab142.uz</p>
+            </div>
+          </div>
+
+          <div class="official-card contact-card-item">
+            <div class="contact-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4 class="contact-item-title" data-i18n="contact_hours_label">Ish vaqti</h4>
+              <p class="contact-item-text" data-i18n="contact_hours_val">Dushanba - Shanba: 08:00 - 18:30</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Campus Location Map Frame -->
+      <div class="map-frame-wrapper">
+        <svg viewBox="0 0 800 340" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+          <rect width="100%" height="100%" fill="#edf2f7" />
+          <!-- Map Roads and Blocks Graphic -->
+          <path d="M0,170 Q400,120 800,170" stroke="#cbd5e1" stroke-width="24" fill="none" />
+          <line x1="400" y1="0" x2="400" y2="340" stroke="#cbd5e1" stroke-width="20" />
+          <rect x="360" y="100" width="80" height="60" rx="4" fill="#0b2545" />
+          <circle cx="400" cy="130" r="12" fill="#00a896" />
+          <text x="400" y="195" text-anchor="middle" font-family="Plus Jakarta Sans" font-weight="700" font-size="14" fill="#0b2545">142-SONLI MAKTAB HUDUDI</text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       16. GOVERNMENT FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div>
+          <a href="#hero" class="nav-brand" style="margin-bottom: 8px;">
+            <div class="school-emblem" style="background: var(--accent-teal);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div class="brand-info">
+              <span class="school-number" style="color: #ffffff;">142-Umumta'lim Maktabi</span>
+              <span class="school-locality" style="color: #94a3b8;">Mirzo Ulug'bek tumani</span>
+            </div>
+          </a>
+          <p class="footer-school-desc" data-i18n="footer_about_text">
+            O'zbekiston Respublikasi Maktabgacha va maktab ta'limi vazirligi tasarrufidagi 142-sonli umumiy o'rta ta'lim maktabi rasmiy portali.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Telegram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer_nav">Menyu</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link" data-i18n="nav_about">Maktab haqida</a></li>
+            <li><a href="#admin" class="footer-link" data-i18n="nav_admin">Ma’muriyat</a></li>
+            <li><a href="#teachers" class="footer-link" data-i18n="nav_teachers">O‘qituvchilar</a></li>
+            <li><a href="#timetable" class="footer-link" data-i18n="nav_timetable">Dars jadvali</a></li>
+            <li><a href="#news" class="footer-link" data-i18n="nav_news">Yangiliklar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer_resources">Foydali resurslar</h4>
+          <ul class="footer-links">
+            <li><a href="https://uzedu.uz" target="_blank" rel="noopener noreferrer" class="footer-link">uzedu.uz</a></li>
+            <li><a href="https://kundalik.com" target="_blank" rel="noopener noreferrer" class="footer-link">eMaktab (kundalik)</a></li>
+            <li><a href="https://my.gov.uz" target="_blank" rel="noopener noreferrer" class="footer-link">my.gov.uz</a></li>
+            <li><a href="https://ziyonet.uz" target="_blank" rel="noopener noreferrer" class="footer-link">ZiyoNET ta'lim tarmog'i</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="contact_title">Aloqa ma’lumotlari</h4>
+          <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.6; margin-bottom: 8px;">
+            Toshkent shahri, Mirzo Ulug'bek tumani, Mustaqillik shoh ko'chasi, 42-uy
+          </p>
+          <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">
+            Tel: +998 (71) 234-56-78
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 142-sonli umumiy o'rta ta'lim maktabi. <span data-i18n="footer_rights">Barcha huquqlar qonun bilan himoyalangan.</span>
+        </div>
+        <div>
+          O'zbekiston Respublikasi
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Generic Reader Modal -->
+  <div class="modal-overlay" id="generic-modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" aria-label="Yopish">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="generic-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="modal-overlay" id="search-modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" aria-label="Yopish">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 style="font-size: 1.25rem; margin-bottom: 16px;">Maktab portali bo'yicha qidiruv</h3>
+      <input type="text" id="global-search-input" placeholder="O'qituvchi, yangilik yoki hujjat nomini yozing..." style="width: 100%; margin-bottom: 16px;" />
+      <ul id="search-results-list" style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+        <li style="padding: 12px; color: var(--text-light); text-align: center;">Qidiruv so'zini kiriting</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Toast Alerts Container -->
+  <div id="toast-container"></div>
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Yuqoriga qaytish">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Script Module -->
+  <script type="module" src="/script.js"></script>
+</body>
+</html>

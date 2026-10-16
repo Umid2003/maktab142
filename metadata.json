@@ -1,0 +1,8 @@
+{
+  "name": "142-Umumiy O‘rta Ta‘lim Maktabi - Rasmiy Veb-Sayt",
+  "description": "O‘zbekiston Respublikasi umumiy o‘rta ta‘lim maktabining rasmiy, zamonaviy va ko‘p tilli axborot portali. Ma’muriyat, o‘qituvchilar, dars jadvali, hujjatlar va yangiliklar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
