@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const i18nData = {
     uz: {
-      gov_republic: "O‘zbekiston Respublikasi Maktabgacha va maktab ta‘limi vazirligi",
+      gov_republic: "O‘zbekiston Respublikasi Ta'lim va ilm-fan vazirligi",
       gov_hotline: "Ishonch telefoni: 1006",
-      school_name_short: "142-Umumta'lim Maktabi",
-      school_locality_short: "Toshkent shahri, Mirzo Ulug'bek tumani",
+      school_name_short: "50-IDUM",
+      school_locality_short: "Baliqchi tumani",
 
       nav_home: "Bosh sahifa",
       nav_about: "Maktab haqida",
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_feat2: "STEAM & Raqamli laboratoriyalar",
       hero_feat3: "Xalqaro olimpiada g'oliblari",
       hero_facade_tag: "O'quv binosi",
-      hero_facade_title: "142-sonli umumiy o'rta ta'lim maktabi",
+      hero_facade_title: "Baliqchi tuamni 50-IDUM",
 
       stat_students: "1,450+",
       stat_students_label: "O‘quvchilar soni",
@@ -171,15 +171,15 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_kicker: "Biz bilan bog'lanish",
       contact_title: "Aloqa ma’lumotlari",
       contact_address_label: "Manzilimiz",
-      contact_address_val: "Toshkent shahri, Mirzo Ulug'bek tumani, Mustaqillik shoh ko'chasi, 42-uy",
+      contact_address_val: "Andijon viloyati, Baliqchi tumani, Avesto MFY, I.Xudoyberdiyev ko'chasi 47-uy",
       contact_phone_label: "Telefon raqamlari",
-      contact_phone_val: "+998 (71) 234-56-78, +998 (71) 234-56-79",
+      contact_phone_val: "+998 (99) 908-15-70",
       contact_email_label: "Elektron manzil",
-      contact_email_val: "info@maktab142.uz",
+      contact_email_val: "info@maktab50-idum.uz",
       contact_hours_label: "Ish vaqti",
-      contact_hours_val: "Dushanba - Shanba: 08:00 - 18:30",
+      contact_hours_val: "Dushanba - Shanba: 08:00 - 17:00",
 
-      footer_about_text: "O'zbekiston Respublikasi Maktabgacha va maktab ta'limi vazirligi tasarrufidagi 142-sonli umumiy o'rta ta'lim maktabi rasmiy portali.",
+      footer_about_text: "Baliqchi tumani 50-IDUM rasmiy portali.",
       footer_nav: "Menyu",
       footer_resources: "Foydali resurslar",
       footer_rights: "Barcha huquqlar qonun bilan himoyalangan.",
@@ -832,14 +832,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   // 6. PHOTO GALLERY DATA & LIGHTBOX
   // =========================================================================
-  const galleryItems = [
-    { title: { uz: "Maktab asosiy fasadi va maydoni", ru: "Главный фасад и площадь школы", en: "Main campus facade and courtyard" }, category: "campus" },
-    { title: { uz: "Raqamli texnologiyalar va IT xonasi", ru: "Кабинет цифровых технологий и IT", en: "Digital laboratory and IT classroom" }, category: "classes" },
-    { title: { uz: "Axborot-kutubxona resurs markazi", ru: "Информационно-библиотечный центр", en: "Library and media resource center" }, category: "campus" },
-    { title: { uz: "Keng yopiq sport zali mashg'ulotlari", ru: "Занятия в просторном спортзале", en: "Indoor gymnasium athletic drills" }, category: "sports" },
-    { title: { uz: "STEAM kimyo-fizika laboratoriyasi", ru: "STEAM лаборатория химии и физики", en: "STEAM chemistry and physics lab" }, category: "classes" },
-    { title: { uz: "Bilimlar kuni va bayram tantanasi", ru: "Праздничная линейка ко Дню знаний", en: "Knowledge Day opening ceremony" }, category: "events" }
-  ];
+  // const galleryItems = [
+  //   { title: { uz: "Maktab asosiy fasadi va maydoni", ru: "Главный фасад и площадь школы", en: "Main campus facade and courtyard" }, category: "campus" },
+  //   { title: { uz: "Raqamli texnologiyalar va IT xonasi", ru: "Кабинет цифровых технологий и IT", en: "Digital laboratory and IT classroom" }, category: "classes" },
+  //   { title: { uz: "Axborot-kutubxona resurs markazi", ru: "Информационно-библиотечный центр", en: "Library and media resource center" }, category: "campus" },
+  //   { title: { uz: "Keng yopiq sport zali mashg'ulotlari", ru: "Занятия в просторном спортзале", en: "Indoor gymnasium athletic drills" }, category: "sports" },
+  //   { title: { uz: "STEAM kimyo-fizika laboratoriyasi", ru: "STEAM лаборатория химии и физики", en: "STEAM chemistry and physics lab" }, category: "classes" },
+  //   { title: { uz: "Bilimlar kuni va bayram tantanasi", ru: "Праздничная линейка ко Дню знаний", en: "Knowledge Day opening ceremony" }, category: "events" }
+  // ];
 
   // =========================================================================
   // 7. APPLICATION STATE

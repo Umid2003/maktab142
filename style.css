@@ -2210,3 +2210,39 @@ input:focus, select:focus, textarea:focus {
     scroll-behavior: auto !important;
   }
 }
+
+.imgs-grid{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:15px;
+}
+.imgs-grid div{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:200px;
+  border-radius: 15px;
+  cursor:pointer;
+  transition:0.4s
+}
+.imgs-grid div:hover{
+  transform:scale(1.05);
+}
+.img1{
+  background-image: url('/assets/gal1.jpg');
+}
+.img2{
+  background-image: url('/assets/gal2.jpg');
+}
+.img3{
+  background-image: url('/assets/gal3.jpg');
+}
+.img4{
+  background-image: url('/assets/gal4.jpg');
+}
+.img5{
+  background-image: url('/assets/gal5.jpg');
+}
+.img6{
+  background-image: url('/assets/gal6.jpg');
+}
